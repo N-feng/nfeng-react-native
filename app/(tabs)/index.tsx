@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import Welcome from '../../components/home/welcome/Welcome';
 import { useRouter } from 'expo-router';
 import { COLORS, SIZES } from '../../constants';
-import { Popularjobs } from '../../components';
+import { Popularjobs, Nearbyjobs } from '../../components';
 
 export default function TabOneScreen() {
   const router = useRouter();
@@ -31,9 +31,10 @@ export default function TabOneScreen() {
             }} />
           
           <Popularjobs />
-          <Text style={styles.title}>Tab One1</Text>
+          <Nearbyjobs />
+          {/* <Text style={styles.title}>Tab One1</Text>
           <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-          <EditScreenInfo path="app/(tabs)/index.tsx" />
+          <EditScreenInfo path="app/(tabs)/index.tsx" /> */}
         </View>
       </ScrollView>
     </SafeAreaView>
